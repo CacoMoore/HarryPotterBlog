@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className="container">
                     <a href="#" className="navbar-brand d-flex align-items-center">
                         <img style={{width: "5rem", height: "5rem"}} src="https://uploads.turbologo.com/uploads/design/hq_preview_image/5097676/draw_svg20210617-26747-23281c.svg.png"></img>
-                        <strong>Harry Potter Blog</strong>
+                        <strong className="ms-3">Harry Potter Blog</strong>
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

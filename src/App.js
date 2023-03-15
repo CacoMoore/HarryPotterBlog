@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/navbar";
 import Centro from "./components/centro";
 import Card from "./components/card";
+import Houses from "./components/houses";
+import Footer from "./components/footer";
 
 const App = (props) => {
   const [characters, setCharacters] = useState([]);
@@ -24,6 +26,46 @@ const App = (props) => {
     <>
       <Navbar />
       <Centro />
+
+     
+
+      <div className="cards container px-4 py-5" id="custom-cards">
+        <h2 className="pb-2 border-bottom">Houses</h2>
+
+        <div className="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
+
+          <div className="col">
+            <Houses
+              bkg= "https://img3.goodfon.com/wallpaper/nbig/2/45/griffindor-gryffindor-garri.jpg"
+              housename= "Gryffindor"
+              />
+          </div>
+
+          <div className="col">
+            <Houses
+              bkg= "https://www.pixelstalk.net/wp-content/uploads/images6/The-best-Ravenclaw-Background.jpg"
+              housename= "Ravenclaw"
+              />
+          </div>
+
+          <div className="col">
+            <Houses
+              bkg= "https://i.pinimg.com/originals/ba/e0/3b/bae03b199c524e881bebe214ced4ab88.jpg"
+              housename= "Hufflepuff"
+              />
+          </div>
+
+          <div className="col">
+            <Houses
+              bkg= "https://images3.alphacoders.com/556/556529.jpg"
+              housename= "Slytherin"
+              />
+          </div>
+
+          
+
+        </div>
+      </div>
 
       <div className="cards container px-4 py-5" id="custom-cards">
         <h2 className="pb-2 border-bottom">Characters</h2>
@@ -47,31 +89,7 @@ const App = (props) => {
         </div>
       </div>
 
-      <div className="cards container px-4 py-5" id="custom-cards">
-        <h2 className="pb-2 border-bottom">Houses</h2>
-
-        <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-
-          <div className="col">
-            <Card
-
-            />
-          </div>
-
-          <div className="col">
-            <Card
-
-            />
-          </div>
-
-          <div className="col">
-            <Card
-
-            />
-          </div>
-
-        </div>
-      </div>
+      <Footer/>
 
 
 

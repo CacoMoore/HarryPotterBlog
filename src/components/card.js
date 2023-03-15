@@ -1,14 +1,11 @@
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-const element = <FontAwesomeIcon icon={faEnvelope} />
 
 const Card = (props) => {
   //let image = {backgroundImage: `url ('${props.image}')`};
 
   return (
-    <div className="card" style={{ width: "12rem" }}>
+    <div className="card shadow-lg" style={{ width: "12rem" }}>
       <img src={props.image} className="card-img-top" style={{ width: "12rem", height: "15rem", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center", }} alt="..." />
       <div className="card-body">
         <h5 className="card-title">{props.name}</h5>
