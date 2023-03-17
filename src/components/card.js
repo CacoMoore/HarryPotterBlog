@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 
 
 const Card = (props) => {
@@ -12,7 +13,7 @@ const Card = (props) => {
         <p className="card-text">{props.house}</p>
         <p className="card-text">{props.ancestry}</p>
         <br />
-        <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+        <div className="btn-group btn-group-sm" role="group" aria-label="Small button group">
           <a href="#" type="button" className="btn btn-outline-dark">Back to top</a>
           <a href="#" type="button" className="btn btn-outline-dark">Fav</a>
         </div>

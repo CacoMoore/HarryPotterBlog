@@ -1,96 +1,32 @@
 
 
-import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Centro from "./components/centro";
-import Card from "./components/card";
-import Houses from "./components/houses";
 import Footer from "./components/footer";
+import Home from "./views/home";
+import Favorites from "./views/favorites";
+import Gryffindor from "./views/gryffindor";
+import Ravenclaw from "./views/ravenclaw";
+import Hufflepuff from "./views/hufflepuff";
+import Slytherin from "./views/slytherin";
 
 const App = (props) => {
-  const [characters, setCharacters] = useState([]);
-
-  const getCharacters = () => {
-    fetch("https://hp-api.onrender.com/api/characters")
-      .then(res => res.json())
-      .then(data => setCharacters(data))
-      .catch(error => console.log(error))
-  };
-  useEffect(() => {
-    getCharacters();
-    console.log(characters);
-
-  },)
-
   return (
     <>
-      <Navbar />
-      <Centro />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/gryffindor" element={<Gryffindor />} />
+          <Route path="/ravenclaw" element={<Ravenclaw />} />
+          <Route path="/hufflepuff" element={<Hufflepuff />} />
+          <Route path="/slytherin" element={<Slytherin />} />
 
-     
 
-      <div className="cards container px-4 py-5" id="custom-cards">
-        <h2 className="pb-2 border-bottom">Houses</h2>
-
-        <div className="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
-
-          <div className="col">
-            <Houses
-              bkg= "https://img3.goodfon.com/wallpaper/nbig/2/45/griffindor-gryffindor-garri.jpg"
-              housename= "Gryffindor"
-              />
-          </div>
-
-          <div className="col">
-            <Houses
-              bkg= "https://www.pixelstalk.net/wp-content/uploads/images6/The-best-Ravenclaw-Background.jpg"
-              housename= "Ravenclaw"
-              />
-          </div>
-
-          <div className="col">
-            <Houses
-              bkg= "https://i.pinimg.com/originals/ba/e0/3b/bae03b199c524e881bebe214ced4ab88.jpg"
-              housename= "Hufflepuff"
-              />
-          </div>
-
-          <div className="col">
-            <Houses
-              bkg= "https://images3.alphacoders.com/556/556529.jpg"
-              housename= "Slytherin"
-              />
-          </div>
-
-          
-
-        </div>
-      </div>
-
-      <div className="cards container px-4 py-5" id="custom-cards">
-        <h2 className="pb-2 border-bottom">Characters</h2>
-
-        <div className="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
-          {characters ?
-            characters.map((character) => (                            //función map retorna un array --> (Character) en singular tiene la información de la API
-              <div className="col-md-12">
-                <Card
-                  image={character.image}
-                  name={character.name}
-                  house={character.house}
-                  ancestry={character.ancestry}
-
-                />
-              </div>
-
-            ))
-            : "Error. No se pudieron cargar los personasjes"}
-
-        </div>
-      </div>
-
-      <Footer/>
-
+        </Routes>
+        <Footer />
+      </BrowserRouter>
 
 
     </>
