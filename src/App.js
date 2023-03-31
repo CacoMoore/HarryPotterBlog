@@ -1,6 +1,7 @@
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import injectContext from "./store/context";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Home from "./views/home";
@@ -19,7 +20,7 @@ const App = (props) => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/favorites" element={<Favorites />} />
-          <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/detail/" element={<Detail />} />
           <Route path="/gryffindor" element={<Gryffindor />} />
           <Route path="/ravenclaw" element={<Ravenclaw />} />
           <Route path="/hufflepuff" element={<Hufflepuff />} />
@@ -35,4 +36,4 @@ const App = (props) => {
   );
 };
 
-export default App;
+export default injectContext(App);

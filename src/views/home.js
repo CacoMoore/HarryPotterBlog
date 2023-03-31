@@ -3,7 +3,7 @@ import Centro from "../components/centro";
 import Card from "../components/card";
 import Houses from "../components/houses";
 import { Link } from "react-router-dom";
-//import File from "../components/file";
+
 
 const Home = (props) => {
     const [characters, setCharacters] = useState([]);
@@ -18,12 +18,11 @@ const Home = (props) => {
         getCharacters();
         console.log(characters);
 
-    },)
+    },[])
 
     return (
         <>
-            <Centro />
-                        
+            <Centro />                               
   
             <div className="cards container px-4 py-5" id="custom-cards">
                 <h2 className="pb-2 border-bottom">Houses</h2>
@@ -78,17 +77,13 @@ const Home = (props) => {
                 <div className="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
                     {characters ?
                         characters.map((character) => (                            //función map retorna un array --> (Character) en singular tiene la información de la API
-                        <Link to="detail" style={{ textDecoration: 'none' }}>
+                        
                             <div className="col-md-12">
                                 <Card
                                     image={character.image}
-                                    name={character.name}
-                                    house={character.house}
-                                    ancestry={character.ancestry}
-
-                                />
+                                    name={character.name} />
                             </div>
-                        </Link>
+                        
 
                         ))
                         : "Error. No se pudieron cargar los personasjes"}

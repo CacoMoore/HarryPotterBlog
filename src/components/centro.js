@@ -1,12 +1,5 @@
 import React from 'react';
-import { SketchPicker } from 'react-color';
 
-class Component extends React.Component {
-
-  render() {
-    return <SketchPicker />;
-  }
-}
 const Centro = () => {
     return (
         <div className="centro px-4 py-5 my-5 text-center">

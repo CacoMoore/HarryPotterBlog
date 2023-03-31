@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 
 
 const Detail = (props) => {
-    
-    const {id} = useParams();
+
+    const { id } = useParams();
     const [character, setCharacter] = useState([]);
 
     const getCharacter = () => {
@@ -19,11 +19,11 @@ const Detail = (props) => {
         getCharacter();
         console.log(character);
 
-    },)
-    
+    }, [])
+
     return (
         <div>
-            <File
+             <File
                 image={character.image}
                 name={character.name}
                 house={character.house}
@@ -36,6 +36,8 @@ const Detail = (props) => {
             />
         </div>
     );
+
+    
 }
 
 export default Detail;
