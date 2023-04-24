@@ -7,7 +7,7 @@ const File = (props) => {
             <div className="row g-0 border rounded overflow-hidden flex-md-row my-5 shadow-lg h-md-250 position-relative">
                 <div className="col p-4 d-flex flex-column position-static">
                     <strong className="d-inline-block mb-2">{props.house}</strong>
-                    <h3 className="mb-0">{props.name}</h3>
+                    <h3 className="mb-0">Name{props.name}</h3>
                     <div className="mb-1 text-muted">Alternate name {props.alternate_names}</div>
                     <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                     <ul className="list-group list-group-flush">
@@ -20,7 +20,7 @@ const File = (props) => {
 
                 </div>
                 <div className="col-auto d-none d-lg-block">
-                    <img src={props.image} classNameName="card-img-top" style={{ width: "20rem", height: "23rem", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center", }} alt="..." />
+                    <img src={props.image} className="card-img-top" style={{ width: "20rem", height: "23rem", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center", }} alt="..." />
                 </div>
             </div>
         </div>

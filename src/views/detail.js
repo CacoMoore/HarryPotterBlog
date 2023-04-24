@@ -9,7 +9,7 @@ const Detail = (props) => {
     const [character, setCharacter] = useState([]);
 
     const getCharacter = () => {
-        const url = `https://hp-api.onrender.com/api/characters/${id}`
+        const url = `https://hp-api.onrender.com/api/characters/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setCharacter(data))
@@ -19,25 +19,27 @@ const Detail = (props) => {
         getCharacter();
         console.log(character);
 
-    }, [])
+    }, )
+
 
     return (
         <div>
-             <File
-                image={character.image}
-                name={character.name}
-                house={character.house}
-                ancestry={character.ancestry}
-                alternate_names={character.alternate_names}
-                species={character.species}
-                dateOfBirth={character.dateOfBirth}
-                wand={character.wand}
-                patronus={character.patronus}
+            <File
+                image={character?.image}
+                name={character?.name}
+                house={character?.house}
+                ancestry={character?.ancestry}
+                alternate_names={character?.alternate_names}
+                species={character?.species}
+                dateOfBirth={character?.dateOfBirth}
+                wand={character?.wand}
+                patronus={character?.patronus}
             />
+
         </div>
     );
 
-    
+
 }
 
 export default Detail;

@@ -81,7 +81,8 @@ const Home = (props) => {
                             <div className="col-md-12">
                                 <Card
                                     image={character.image}
-                                    name={character.name} />
+                                    name={character.name}
+                                    id={character.id}/>
                             </div>
                         
 
