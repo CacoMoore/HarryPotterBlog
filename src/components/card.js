@@ -25,11 +25,11 @@ const Card = (props) => {
         <p className="card-text">{props.ancestry}</p>
         <br />
         <div className="btn-group btn-sm " aria-label="Small button group">
-          <Link to={`/detail/id=${props.id}`} style={{ textDecoration: 'none'}}>
+          <Link to={`/detail/${props.id}`} style={{ textDecoration: 'none' }}>
             <button type="button" className="btn btn-sm btn-outline-dark me-4">See profile</button>
           </Link>
           <button onClick={handleSubmit} type="button" className="btn btn-sm btn-outline-dark rounded-circle border-0">{like}</button>
-
+          {/*to={`/detail/character?${props.id}`}*/}
         </div>
 
       </div>
