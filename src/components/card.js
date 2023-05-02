@@ -29,7 +29,6 @@ const Card = (props) => {
             <button type="button" className="btn btn-sm btn-outline-dark me-4">See profile</button>
           </Link>
           <button onClick={handleSubmit} type="button" className="btn btn-sm btn-outline-dark rounded-circle border-0">{like}</button>
-          {/*to={`/detail/character?${props.id}`}*/}
         </div>
 
       </div>

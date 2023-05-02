@@ -16,7 +16,7 @@ const Home = (props) => {
     };
     useEffect(() => {
         getCharacters();
-        console.log(characters);
+        //console.log(characters);
 
     },[])
 
@@ -76,9 +76,9 @@ const Home = (props) => {
                 
                 <div className="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
                     {characters ?
-                        characters.map((character) => (                            //función map retorna un array --> (Character) en singular tiene la información de la API
+                        characters.map((character,i) => (                            //función map retorna un array --> (Character) en singular tiene la información de la API
                         
-                            <div className="col-md-12">
+                            <div className="col-md-12" key={i}>
                                 <Card
                                     image={character.image}
                                     name={character.name}

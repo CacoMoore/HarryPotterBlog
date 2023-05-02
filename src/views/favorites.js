@@ -13,7 +13,7 @@ const Favorites = (props) => {
         <>
             <div className="cards container px-4 py-5" id="custom-cards">
                 <h1>Favorites</h1>
-                <p className="lead mb-5"> You have <strong>{store.favorite.length}</strong> favorites characters in you list.</p>
+                <p className="lead mb-5"> You have <strong>{store.favorite.length}</strong> favorites characters in your list.</p>
                 
                     {store.favorite.length > 0 ? (
                         store.favorite.map((item, index) => (
