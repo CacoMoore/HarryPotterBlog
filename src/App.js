@@ -11,6 +11,8 @@ import Ravenclaw from "./views/ravenclaw";
 import Hufflepuff from "./views/hufflepuff";
 import Slytherin from "./views/slytherin";
 import Detail from "./views/detail";
+import Login from "./views/login";
+import Register from "./views/register";
 
 const App = (props) => {
   return (
@@ -25,7 +27,9 @@ const App = (props) => {
           <Route path="/ravenclaw" element={<Ravenclaw />} />
           <Route path="/hufflepuff" element={<Hufflepuff />} />
           <Route path="/slytherin" element={<Slytherin />} />
-
+          <Route path="/login" element={<Login />}/>
+          <Route path="/register" element={<Register />}/>
+          
 
         </Routes>
         <Footer />

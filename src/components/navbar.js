@@ -12,10 +12,12 @@ const Navbar = () => {
                         </div>
                         <div className="col-sm-4 offset-md-1 py-4">
                             <h4 className="text-white">More info</h4>
-                            <ul className="list-unstyled">
-                                <li><Link to="/favorites" className="text-white">Go to Your Favorites characters</Link></li>
+                            <ul className="list-unstyled" >
+                                <li><Link to="/login" className="text-white">LOGIN</Link></li>
+                                <li><Link to="/favorites" className="text-white">Go to Your FAVORITES characters</Link></li>
                                 <li><a href="https://www.wizardingworld.com/" className="text-white">Go to Wizarding World HP Official site</a></li>
                                 <li><a href="https://harrypotter.fandom.com/es/wiki/HarryPotter_Wiki" className="text-white">Go to Harry Potter fandom</a></li>
+                                <li><a href="/" className="text-white">Log out</a></li>
                             </ul>
                         </div>
                     </div>
@@ -24,7 +26,7 @@ const Navbar = () => {
             <div className="navbar navbar-dark bg-dark shadow-sm">
                 <div className="container">
                     <Link to="/" className="navbar-brand d-flex align-items-center">
-                        <img style={{width: "5rem", height: "5rem"}} src="https://uploads.turbologo.com/uploads/design/hq_preview_image/5097676/draw_svg20210617-26747-23281c.svg.png"></img>
+                        <img style={{ width: "5rem", height: "5rem" }} src="https://uploads.turbologo.com/uploads/design/hq_preview_image/5097676/draw_svg20210617-26747-23281c.svg.png"></img>
                         <strong className="ms-3">Harry Potter Blog</strong>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
